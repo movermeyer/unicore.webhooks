@@ -12,7 +12,7 @@ install:
   - pip install -e .
 script:
   - flake8 unicore
-  - py.test --cov unicore unicore/distribute/webhooks
+  - py.test --cov unicore unicore/webhooks
 after_success:
   - coveralls
 deploy:
