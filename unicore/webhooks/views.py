@@ -28,7 +28,7 @@ def sqlachemy_error(exception, request):
     raise httpexceptions.HTTPNotFound()
 
 
-@resource(collection_path='/hooks.json', path='/hooks/{uuid}.json')
+@resource(collection_path='/hooks', path='/hooks/{uuid}')
 class WebhooksResource(object):
 
     def __init__(self, request):
