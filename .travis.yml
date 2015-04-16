@@ -1,0 +1,25 @@
+language: python
+python:
+  - "2.7"
+  - "pypy"
+services:
+  - elasticsearch
+install:
+  - pip install --upgrade pip
+  - pip install coveralls
+  - pip install flake8
+  - pip install -r requirements-dev.txt
+  - pip install -e .
+script:
+  - flake8 unicore
+  - py.test --cov unicore unicore/distribute/webhooks
+after_success:
+  - coveralls
+deploy:
+  provider: pypi
+  user: Praekelt
+  password:
+    secure: k+zeRrfOsgQVpgGv72iX+D7V0/NX5vioo0dlE0bJYBo0xCYhanWFEKM4IkFKy7qa0ZidHdtZzf4PtKVbdL3Mhq72Hzsnp6Mi8iCSWYgE0cPuivjGRxDK6kvLZzpvqAPENFOnMZxL+OSyvW+M3yCY28HU+y3oc+ZSrmfMaha9qPA=
+  on:
+    tags: true
+    all_branches: true
