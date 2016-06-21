@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-
-# See: http://sqlalchemy-utils.readthedocs.org/en/latest/listeners.html
-from sqlalchemy_utils import force_auto_coercion, force_instant_defaults
-force_auto_coercion()
-force_instant_defaults()
-
 from pyramid.config import Configurator
 
 from sqlalchemy import engine_from_config
+from sqlalchemy_utils import force_auto_coercion, force_instant_defaults
+
 from unicore.webhooks.models import DBSession, Base
+
+# See: http://sqlalchemy-utils.readthedocs.org/en/latest/listeners.html
+force_auto_coercion()
+force_instant_defaults()
 
 
 def main(global_config, **settings):
