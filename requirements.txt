@@ -8,5 +8,5 @@ sqlalchemy==1.0.0b5
 zope.sqlalchemy==0.7.6
 alembic==0.7.5.post2
 SQLAlchemy-Utils==0.29.9
-cryptography==0.8.1
+cryptography==1.4
 requests
