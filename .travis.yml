@@ -15,6 +15,9 @@ script:
   - py.test --cov unicore unicore/webhooks
 after_success:
   - coveralls
+matrix:
+  allow_failures:
+    - python: "pypy"
 deploy:
   provider: pypi
   user: Praekelt
