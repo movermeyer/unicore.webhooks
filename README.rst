@@ -11,6 +11,6 @@ Webhook tools for Universal Core.
     :target: https://coveralls.io/r/universalcore/unicore.webhooks?branch=develop
     :alt: Code Coverage
 
-.. image:: https://pypip.in/version/unicore.webhooks/badge.svg
+.. image:: https://img.shields.io/pypi/v/unicore.webhooks.svg
     :target: https://pypi.python.org/pypi/unicore.webhooks
     :alt: Pypi Package
